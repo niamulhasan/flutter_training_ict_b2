@@ -15,26 +15,32 @@ class MyContactApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: const Color(0xff22343C),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0.0,
-          flexibleSpace: Padding(
-            padding: const EdgeInsets.fromLTRB(5.5, 10.0, 5.0, 0.0),
+          flexibleSpace: Container(
+            margin: const EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
-              children: <Widget>[
-                const Flexible(
-                  fit: FlexFit.loose,
-                  flex: 4,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const <Widget>[
+                Flexible(
+                  fit: FlexFit.tight,
+                  flex: 5,
                   child: MySearchBar(),
                 ),
-                Flexible(flex: 1, fit: FlexFit.loose, child: MySearchButton())
+                Flexible(
+                    flex: 1,
+                    fit: FlexFit.tight,
+                    child: Center(child: MySearchButton()))
               ],
             ),
           ),
         ),
-        body: Text("Foo"),
+        body: const Text("Boo"),
       ),
     );
   }
