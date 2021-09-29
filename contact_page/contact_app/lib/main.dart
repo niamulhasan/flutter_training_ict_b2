@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 //components imports
 import 'components/MySearchBar.dart';
 import 'components/MySearchButton.dart';
+import 'components/MyContactItem.dart';
+import 'components/partials/MyDevider.dart';
 
 void main() {
   runApp(MyContactApp());
@@ -28,19 +30,83 @@ class MyContactApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const <Widget>[
                 Flexible(
-                  fit: FlexFit.tight,
                   flex: 5,
                   child: MySearchBar(),
                 ),
                 Flexible(
-                    flex: 1,
-                    fit: FlexFit.tight,
-                    child: Center(child: MySearchButton()))
+                  flex: 1,
+                  child: Center(
+                    child: MySearchButton(),
+                  ),
+                )
               ],
             ),
           ),
         ),
-        body: const Text("Boo"),
+        body: ListView(
+          children: const <Widget>[
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+            MyContactItem(),
+            MyDevider(),
+          ],
+        ),
       ),
     );
   }
