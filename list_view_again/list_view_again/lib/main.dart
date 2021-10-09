@@ -35,7 +35,7 @@ class MyScrollViewAgainApp extends StatelessWidget {
                 background_color: Colors.blueAccent,
               ),
               MyListTile(
-                  name: "Hasan",
+                  name: "Niamul",
                   text_under_title: "Last seen last year",
                   background_color: Colors.purpleAccent),
             ],
