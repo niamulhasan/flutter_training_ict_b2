@@ -12,7 +12,22 @@ class MyScrollViewAgainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        cardColor: Color.lerp(Colors.red, Colors.white, 0.2),
+        cardTheme: ThemeData.dark().cardTheme?.copyWith(
+              color: Color.lerp(Colors.red, Colors.black, 0.1),
+              margin: EdgeInsets.all(20.0),
+              elevation: 0.0,
+              shape: BeveledRectangleBorder(
+                  borderRadius: BorderRadius.circular(14.0),
+                  side: BorderSide(color: Colors.white24, width: 1)),
+            ),
+      ),
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.ac_unit),
+        ),
         appBar: AppBar(
           title: Center(child: Icon(Icons.account_tree_rounded)),
         ),
@@ -20,7 +35,7 @@ class MyScrollViewAgainApp extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           child: ListView(
-            children: [
+            children: const [
               MyListTile(
                   name: "Rahim",
                   text_under_title: "Last seen yesterday",
