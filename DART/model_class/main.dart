@@ -72,5 +72,5 @@ void main() {
     bookList.add(book);
   }
 
-  print(bookList[0].id.runtimeType);
+  print(bookList[0].englishName);
 }
