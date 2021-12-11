@@ -13,6 +13,8 @@ class NewsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           width: double.infinity,
@@ -21,10 +23,14 @@ class NewsTile extends StatelessWidget {
               color: Colors.redAccent,
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: NetworkImage("https://picsum.photos/200/300"),
+                image: NetworkImage(
+                    "http://localhost:1337${data![index]["attributes"]["image"]["data"]["attributes"]["url"]}"),
               )),
         ),
-        Text("${data![index]["attributes"]["title"]}"),
+        Text(
+          "${data![index]["attributes"]["title"]}",
+          style: TextStyle(fontSize: 18.0),
+        ),
         Text(
           "${(data![index]["attributes"]["details"]).substring(0, 20)}",
         ),
