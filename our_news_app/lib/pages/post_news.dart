@@ -14,13 +14,18 @@ class _PostNewsPageState extends State<PostNewsPage> {
   void postNews() async {
     try {
       http.Response response = await http.post(
-        Uri.parse("https://jsonplaceholder.typicode.com/posts"),
+        Uri.parse(
+          "http://9822-103-217-108-77.ngrok.io/api/articles/",
+          // "https://jsonplaceholder.typicode.com/posts",
+        ),
         headers: {
           "Context-Type": "application/json; charset=UTF-8",
-          "Access-Control-Allow-Origin": "*"
+          // "Access-Control-Allow-Origin": "*"
         },
         body: jsonEncode({
-          "data": {"title": "post by flutter"}
+          "data": {
+            "attributes": {"title": "boo"}
+          }
         }),
       );
 
