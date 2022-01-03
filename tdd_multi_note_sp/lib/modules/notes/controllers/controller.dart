@@ -9,8 +9,12 @@ class NotesController implements AbsNotesController {
   Future<bool> addNote(String note) async {
     SharedPreferences handle = await SharedPreferences.getInstance();
     List<String>? currentNotes = handle.getStringList(Config.notes_key);
-    currentNotes!.add(note);
-    return await handle.setStringList(Config.notes_key, currentNotes);
+    if (currentNotes != null) {
+      currentNotes.add(note);
+      return await handle.setStringList(Config.notes_key, currentNotes);
+    } else {
+      return await handle.setStringList(Config.notes_key, [note]);
+    }
   }
 
   @override
