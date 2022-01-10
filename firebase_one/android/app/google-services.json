@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "52472832739",
+    "project_id": "keep-clone-b2",
+    "storage_bucket": "keep-clone-b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52472832739:android:67d2b50580405e2d965bd6",
+        "android_client_info": {
+          "package_name": "dev.niamul.keep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52472832739-394om3c4047fkvtfu0819pkgeisj4ivu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5aFz3cIjM7gCfChImB28co3boI5KODJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52472832739-394om3c4047fkvtfu0819pkgeisj4ivu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
